@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<!--引入css样式文件-->
+
+<AnchorPane id="mainPane" maxHeight="503.5" maxWidth="840.0" stylesheets="@/sample.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.javafx.controller.Controller">
+   <children>
+       <!--顶部-->
+       <Label fx:id="labelAddress" layoutX="10.0" layoutY="10.0" text="camera address " textFill="black" />
+       <TextField fx:id="videoAddr" layoutX="110.0" layoutY="7.0" prefWidth="250.0" text="D:\software\迅雷下载\下载文件\Ip.Man.4.The.Finale.2019.CHINESE.1080p.BluRay.x264.DTS-HDC\\Ip.Man.4.The.Finale.2019.CHINESE.1080p.BluRay.x264.DTS-HDC.mkv" />
+       <Button fx:id="connButton" layoutX="378.0" layoutY="7.0" mnemonicParsing="false" onAction="#videoOpen" text="连接" />
+       <Button fx:id="disconnButton" layoutX="421.0" layoutY="7.0" mnemonicParsing="false" onAction="#videoClose" text="断开" />
+       <Label fx:id="fpsKey" layoutX="590.0" layoutY="12.0" text="fps" />
+       <Label fx:id="fps" layoutX="615.0" layoutY="13.0" text="00.00" />
+       <!--视频区域-->
+       <VBox fx:id="vbox1" layoutX="2.0" layoutY="35.0">
+           <children>
+               <ImageView fx:id="videImg" fitHeight="360.0" fitWidth="640.0" layoutX="10.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true"/>
+           </children>
+       </VBox>
+
+       <!--日志区域-->
+       <Label layoutX="767.0" layoutY="12.0" text="日志" textFill="white" />
+       <Button fx:id="clearLogButton" layoutX="797.0" layoutY="9.0" mnemonicParsing="false" onAction="#clearLog" text="清空" />
+       <TextArea fx:id="logRes" layoutX="645.0" layoutY="34.0" prefHeight="467.0" prefWidth="193.0" />
+
+       <!--功能区域-->
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="white" height="102.0" layoutX="2.0" layoutY="398.5" stroke="#757575" strokeType="INSIDE" width="642.0" />
+
+       <!--识别线圈-->
+       <Label layoutX="25.0" layoutY="431.0" text="识别线圈" />
+       <CheckBox layoutX="90.0" layoutY="430.0" mnemonicParsing="false" text="打开" />
+       <CheckBox layoutX="140.0" layoutY="430.0" mnemonicParsing="false" text="关闭" />
+       <!--实时检测-->
+       <Label layoutX="25.0" layoutY="451.0" text="实时检测" />
+       <CheckBox layoutX="90.0" layoutY="450.0" mnemonicParsing="false" text="打开" />
+       <CheckBox layoutX="140.0" layoutY="450.0" mnemonicParsing="false" text="关闭" />
+       <!--实时识别-->
+       <Label layoutX="25.0" layoutY="471.0" text="实时识别" />
+       <CheckBox layoutX="90.0" layoutY="470.0" mnemonicParsing="false" text="打开" />
+       <CheckBox layoutX="140.0" layoutY="470.0" mnemonicParsing="false" text="关闭" />
+
+       <!--抓取识别-->
+       <Button layoutX="240.0" layoutY="433.0" mnemonicParsing="false" onAction="#videoOpen" text="抓取检测" />
+       <!--抓取识别-->
+       <Button layoutX="240.0" layoutY="463.0" mnemonicParsing="false" onAction="#videoOpen" text="抓取识别" />
+
+   </children>
+</AnchorPane>

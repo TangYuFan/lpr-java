@@ -1,0 +1,63 @@
+/* .是类选择器 #是id选择器 root设置全局属性 */
+
+.root{
+    /*-fx-font-weight: bolder;*/
+}
+
+
+#mainPane{
+    -fx-background-color:#9E9E9E;
+}
+
+#vbox1{
+    -fx-background-color:white;
+    -fx-border-color: #757575;
+}
+
+#clearLogButton{
+    -fx-background-color: #536DFE;
+    -fx-text-fill: #FFFFFF;
+}
+
+#clearLogButton:pressed{
+    -fx-background-color: #757575;
+}
+
+#connButton{
+    -fx-background-color: #536DFE;
+    -fx-text-fill: #FFFFFF;
+}
+
+#connButton:pressed{
+    -fx-background-color: #757575;
+}
+
+#disconnButton{
+    -fx-background-color: #757575;
+    -fx-text-fill: #FFFFFF;
+}
+
+#labelAddress{
+    -fx-text-fill: white;
+    -fx-font-weight: bolder;
+}
+
+#fpsKey{
+    -fx-text-fill: white;
+    -fx-font-weight: bolder;
+}
+
+#fps{
+    -fx-text-fill: white;
+}
+
+.text-field{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+.text-area .scroll-pane .content {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-color: #757575;
+}
